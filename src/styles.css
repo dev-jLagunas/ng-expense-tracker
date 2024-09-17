@@ -1,6 +1,15 @@
+@import "./assets/css/tailwind-utilities.css";
+
 /************************************************************
 TAILWIND CONFIG
 *************************************************************/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/************************************************************
+GLOBAL STYLES
+*************************************************************/
+body {
+  font-family: "Nunito", sans-serif;
+}
