@@ -7,9 +7,35 @@ NAVBAR STYLES (BOTTOM)
 }
 
 .bottom-nav-item {
-  @apply text-white;
+  @apply text-white hover:cursor-pointer;
 }
 
 .bottom-hover-text {
-  @apply hidden group-hover:block absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-emerald-700 text-white  rounded-md px-3 py-1;
+  @apply hidden group-hover:block absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-emerald-700 text-white rounded-md px-3 py-1;
+}
+
+/************************************************************
+NAVBAR HEADER (TOP)
+*************************************************************/
+.navbar-header {
+  @apply bg-emerald-700  text-white py-2 flex justify-between items-center px-4;
+}
+
+.header-hover-text {
+  @apply hidden group-hover:block absolute -bottom-12 left-1/2 transform -translate-x-14 bg-emerald-700 text-white rounded-md px-3 py-1;
+}
+
+/************************************************************
+REUSABLE STYLES
+*************************************************************/
+.flex-col-center {
+  @apply flex flex-col justify-center items-center;
+}
+
+.flex-row-center {
+  @apply flex justify-center items-center;
+}
+
+.logo-styles {
+  @apply font-fascinate text-xl xs:text-3xl;
 }

@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fascinate: ['"Fascinate Inline"', "cursive"],
+      },
+      screens: {
+        xs: "425px",
+      },
+    },
   },
   plugins: [],
 };
