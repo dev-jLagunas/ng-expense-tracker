@@ -1,0 +1,26 @@
+<div>
+  <button>see all transactions</button>
+  @for ( transaction of transactions; track transaction.id) {
+  <article class="flex justify-between">
+    <i
+      class="{{ transaction.icon }}"
+      class="bg-red-500 text-white rounded-full h-max p-3"
+    ></i>
+    <div>
+      <h3>{{ transaction.title }}</h3>
+      <p>{{ transaction.notes }}</p>
+    </div>
+    <div>
+      <p
+        [ngClass]="{
+          'text-red-500': transaction.type === 'expense',
+          'text-green-500': transaction.type === 'income'
+        }"
+      >
+        ${{ transaction.amount }}
+      </p>
+      <p>{{ transaction.date }}</p>
+    </div>
+  </article>
+  }
+</div>

@@ -13,6 +13,7 @@ export const dummyData = {
           category: 'Food',
           type: 'expense',
           icon: 'fa-solid fa-utensils',
+          notes: 'groceries for the week',
         },
         {
           id: 2,
@@ -22,6 +23,7 @@ export const dummyData = {
           category: 'Work',
           type: 'income',
           icon: 'fa-solid fa-briefcase',
+          notes: 'freelance project for BofA',
         },
         {
           id: 3,
@@ -31,6 +33,7 @@ export const dummyData = {
           category: 'Utilities',
           type: 'expense',
           icon: 'fa-solid fa-plug',
+          notes: 'SDGE electricity bill',
         },
         {
           id: 4,
@@ -40,6 +43,7 @@ export const dummyData = {
           category: 'Rent',
           type: 'expense',
           icon: 'fa-solid fa-house-chimney',
+          notes: 'monthly mortgage payment',
         },
         {
           id: 5,
@@ -49,6 +53,7 @@ export const dummyData = {
           category: 'Salary',
           type: 'income',
           icon: 'fa-solid fa-money-bill',
+          notes: 'monthly salary',
         },
         {
           id: 6,
@@ -58,6 +63,7 @@ export const dummyData = {
           category: 'Salary',
           type: 'income',
           icon: 'fa-solid fa-money-bill',
+          notes: 'sign on bonus for new client',
         },
         {
           id: 7,
@@ -67,6 +73,7 @@ export const dummyData = {
           category: 'Food',
           type: 'expense',
           icon: 'fa-solid fa-utensils',
+          notes: 'celebration dinner with family',
         },
         {
           id: 8,
@@ -76,6 +83,7 @@ export const dummyData = {
           category: 'Health',
           type: 'expense',
           icon: 'fa-solid fa-kit-medical',
+          notes: 'monthly gym membership',
         },
         {
           id: 9,
@@ -85,15 +93,17 @@ export const dummyData = {
           category: 'Leisure',
           type: 'expense',
           icon: 'fa-solid fa-umbrella-beach',
+          notes: 'family vacation to Japan',
         },
         {
           id: 10,
-          title: 'Lottery',
+          title: 'Jackpot',
           amount: 11000,
           date: '2024-09-19',
           category: 'Other Income',
           type: 'income',
           icon: 'fa-solid fa-money-bill',
+          notes: 'jackpot at casino',
         },
         {
           id: 11,
@@ -103,6 +113,7 @@ export const dummyData = {
           category: 'Education',
           type: 'expense',
           icon: 'fa-solid fa-school',
+          notes: 'Udemy programming course',
         },
         {
           id: 12,
@@ -112,6 +123,7 @@ export const dummyData = {
           category: 'Insurance',
           type: 'expense',
           icon: 'fa-solid fa-user-shield',
+          notes: 'monthly car insurance',
         },
         {
           id: 13,
@@ -121,6 +133,7 @@ export const dummyData = {
           category: 'Clothing',
           type: 'expense',
           icon: 'fa-solid fa-shirt',
+          notes: 'New suit for wedding',
         },
         {
           id: 14,
@@ -130,6 +143,7 @@ export const dummyData = {
           category: 'Freelance',
           type: 'income',
           icon: 'fa-solid fa-money-bill',
+          notes: 'freenlance project for accounting firm',
         },
       ],
       budgets: [
