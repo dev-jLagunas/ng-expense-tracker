@@ -1,0 +1,5 @@
+<div class="date-selector flex justify-between items-center px-4">
+  <button (click)="previousMonth()">Previous</button>
+  <p>{{ currentMonth | date : "MMMM y" }}</p>
+  <button (click)="nextMonth()">Next</button>
+</div>
