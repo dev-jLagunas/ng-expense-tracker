@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { DateSelectorService } from '../services/date-selector.service';
 import { IncomeExpenseService } from '../services/income-expense.service';
+import { GraphsChartsService } from '../services/graphs-charts.service';
 
 @Component({
   selector: 'app-date-selector',
@@ -13,6 +14,7 @@ import { IncomeExpenseService } from '../services/income-expense.service';
 export class DateSelectorComponent {
   dateSelectorService = inject(DateSelectorService);
   incomeExpenseService = inject(IncomeExpenseService);
+  graphsChartService = inject(GraphsChartsService);
   currentMonth!: Date;
 
   constructor() {
@@ -23,11 +25,13 @@ export class DateSelectorComponent {
     this.dateSelectorService.previousMonth();
     this.currentMonth = this.dateSelectorService.getCurrentMonth();
     this.incomeExpenseService.updateFinancialSummary();
+    this.graphsChartService.updateCategoryData();
   }
 
   nextMonth() {
     this.dateSelectorService.nextMonth();
     this.currentMonth = this.dateSelectorService.getCurrentMonth();
     this.incomeExpenseService.updateFinancialSummary();
+    this.graphsChartService.updateCategoryData();
   }
 }
