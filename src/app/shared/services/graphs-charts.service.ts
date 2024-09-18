@@ -21,10 +21,10 @@ export class GraphsChartsService {
   categoryData$: Observable<any[]> = this.categoryDataSubject.asObservable();
 
   constructor() {
-    this.updateCategoryData();
+    this.calculateCategoryExpenseData();
   }
 
-  updateCategoryData() {
+  calculateCategoryExpenseData() {
     const transactions =
       this.incomeExpenseService.getCurrentMonthTransactions();
     const categoryMap: { [category: string]: number } = {};

@@ -12,14 +12,16 @@ export const dummyData = {
           date: '2024-08-03',
           category: 'Food',
           type: 'expense',
+          icon: 'fa-solid fa-utensils',
         },
         {
           id: 2,
           title: 'Freelance Project',
           amount: 1200,
           date: '2024-08-05',
-          category: 'Freelance',
+          category: 'Work',
           type: 'income',
+          icon: 'fa-solid fa-briefcase',
         },
         {
           id: 3,
@@ -28,6 +30,7 @@ export const dummyData = {
           date: '2024-08-10',
           category: 'Utilities',
           type: 'expense',
+          icon: 'fa-solid fa-plug',
         },
         {
           id: 4,
@@ -36,6 +39,7 @@ export const dummyData = {
           date: '2024-09-01',
           category: 'Rent',
           type: 'expense',
+          icon: 'fa-solid fa-house-chimney',
         },
         {
           id: 5,
@@ -44,6 +48,7 @@ export const dummyData = {
           date: '2024-09-01',
           category: 'Salary',
           type: 'income',
+          icon: 'fa-solid fa-money-bill',
         },
         {
           id: 6,
@@ -52,6 +57,7 @@ export const dummyData = {
           date: '2024-09-12',
           category: 'Salary',
           type: 'income',
+          icon: 'fa-solid fa-money-bill',
         },
         {
           id: 7,
@@ -60,6 +66,7 @@ export const dummyData = {
           date: '2024-09-12',
           category: 'Food',
           type: 'expense',
+          icon: 'fa-solid fa-utensils',
         },
         {
           id: 8,
@@ -68,6 +75,7 @@ export const dummyData = {
           date: '2024-09-15',
           category: 'Health',
           type: 'expense',
+          icon: 'fa-solid fa-kit-medical',
         },
         {
           id: 9,
@@ -76,6 +84,7 @@ export const dummyData = {
           date: '2024-09-17',
           category: 'Leisure',
           type: 'expense',
+          icon: 'fa-solid fa-umbrella-beach',
         },
         {
           id: 10,
@@ -84,6 +93,7 @@ export const dummyData = {
           date: '2024-09-19',
           category: 'Other Income',
           type: 'income',
+          icon: 'fa-solid fa-money-bill',
         },
         {
           id: 11,
@@ -92,6 +102,7 @@ export const dummyData = {
           date: '2024-09-03',
           category: 'Education',
           type: 'expense',
+          icon: 'fa-solid fa-school',
         },
         {
           id: 12,
@@ -100,6 +111,7 @@ export const dummyData = {
           date: '2024-09-06',
           category: 'Insurance',
           type: 'expense',
+          icon: 'fa-solid fa-user-shield',
         },
         {
           id: 13,
@@ -108,6 +120,7 @@ export const dummyData = {
           date: '2024-09-10',
           category: 'Clothing',
           type: 'expense',
+          icon: 'fa-solid fa-shirt',
         },
         {
           id: 14,
@@ -116,6 +129,7 @@ export const dummyData = {
           date: '2024-09-18',
           category: 'Freelance',
           type: 'income',
+          icon: 'fa-solid fa-money-bill',
         },
       ],
       budgets: [

@@ -25,13 +25,13 @@ export class DateSelectorComponent {
     this.dateSelectorService.previousMonth();
     this.currentMonth = this.dateSelectorService.getCurrentMonth();
     this.incomeExpenseService.updateFinancialSummary();
-    this.graphsChartService.updateCategoryData();
+    this.graphsChartService.calculateCategoryExpenseData();
   }
 
   nextMonth() {
     this.dateSelectorService.nextMonth();
     this.currentMonth = this.dateSelectorService.getCurrentMonth();
     this.incomeExpenseService.updateFinancialSummary();
-    this.graphsChartService.updateCategoryData();
+    this.graphsChartService.calculateCategoryExpenseData();
   }
 }

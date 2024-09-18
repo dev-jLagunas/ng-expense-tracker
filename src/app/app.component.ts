@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  OnInit,
+  signal,
+  HostBinding,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MobileNavbarComponent } from './navigation/mobile-navbar/mobile-navbar.component';
@@ -18,6 +24,7 @@ import { DesktopSidebarComponent } from './navigation/desktop-sidebar/desktop-si
 })
 export class AppComponent implements OnInit {
   isMobile!: boolean;
+  darkMode = signal<boolean>(false);
 
   ngOnInit(): void {
     this.checkScreenSize();
@@ -30,5 +37,14 @@ export class AppComponent implements OnInit {
 
   checkScreenSize(): void {
     this.isMobile = window.innerWidth < 768;
+  }
+
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode();
+  }
+
+  toggleDarkMode() {
+    this.darkMode.update((mode) => !mode);
+    console.log(this.darkMode());
   }
 }

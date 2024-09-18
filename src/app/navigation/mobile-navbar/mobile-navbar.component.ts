@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -8,4 +8,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './mobile-navbar.component.html',
   styleUrl: './mobile-navbar.component.css',
 })
-export class MobileNavbarComponent {}
+export class MobileNavbarComponent {
+  darkModeToggle = output();
+
+  toggleDarkMode() {
+    this.darkModeToggle.emit();
+  }
+}

@@ -1,10 +1,13 @@
 @if (isMobile) {
-<div>
+<div class="">
   <app-header></app-header>
   <main>
     <router-outlet></router-outlet>
   </main>
-  <app-mobile-navbar class="md:hidden"></app-mobile-navbar>
+  <app-mobile-navbar
+    (darkModeToggle)="toggleDarkMode()"
+    class="md:hidden"
+  ></app-mobile-navbar>
 </div>
 } @else {
 <app-header></app-header>
