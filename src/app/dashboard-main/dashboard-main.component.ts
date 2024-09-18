@@ -4,6 +4,7 @@ import { IncomeExpenseService } from '../shared/services/income-expense.service'
 import { CurrencyPipe } from '@angular/common';
 import { DashboardChartComponent } from './dashboard-chart/dashboard-chart.component';
 import { DashboardTransactionsComponent } from './dashboard-transactions/dashboard-transactions.component';
+import { DashboardBudgetsComponent } from './dashboard-budgets/dashboard-budgets.component';
 
 @Component({
   selector: 'app-dashboard-main',
@@ -13,6 +14,7 @@ import { DashboardTransactionsComponent } from './dashboard-transactions/dashboa
     CurrencyPipe,
     DashboardChartComponent,
     DashboardTransactionsComponent,
+    DashboardBudgetsComponent,
   ],
   templateUrl: './dashboard-main.component.html',
   styleUrl: './dashboard-main.component.css',

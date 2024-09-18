@@ -32,6 +32,24 @@ export class IncomeExpenseService {
     });
   }
 
+  getCurrentMonthBudgets() {
+    const currentDate = this.dateSelectorService.getCurrentDate();
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
+
+    return this.#dummyData().users[0].budgets.filter((budget) => {
+      const startDate = new Date(budget.startDate);
+      const endDate = new Date(budget.endDate);
+
+      return (
+        startDate.getMonth() === currentMonth &&
+        startDate.getFullYear() === currentYear &&
+        endDate.getMonth() === currentMonth &&
+        endDate.getFullYear() === currentYear
+      );
+    });
+  }
+
   updateFinancialSummary() {
     const transactions = this.getCurrentMonthTransactions();
 
