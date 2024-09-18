@@ -1,3 +1,18 @@
-<app-header></app-header>
-<app-navbar class="md:hidden"></app-navbar>
-<!-- <app-sidebar class="hidden md:block"></app-sidebar> -->
+<!-- < 768px screens-->
+<div>
+  <app-header></app-header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <app-mobile-navbar class="md:hidden"></app-mobile-navbar>
+</div>
+<!-- >= 768px screens -->
+<div>
+  <app-desktop-sidebar
+    class="hidden md:block fixed left-0 top-0 h-full w-1/4 bg-gray-800 text-white"
+  ></app-desktop-sidebar>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <!-- FOOTER COMPONENT HERE -->
+</div>

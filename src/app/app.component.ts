@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './navigation/navbar/navbar.component';
-import { SidebarComponent } from './navigation/sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
+import { MobileNavbarComponent } from './navigation/mobile-navbar/mobile-navbar.component';
+import { DesktopSidebarComponent } from './navigation/desktop-sidebar/desktop-sidebar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, SidebarComponent, HeaderComponent],
+  imports: [
+    RouterOutlet,
+    MobileNavbarComponent,
+    DesktopSidebarComponent,
+    HeaderComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
