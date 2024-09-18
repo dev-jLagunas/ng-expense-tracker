@@ -1,3 +1,13 @@
 <div>
   <app-date-selector></app-date-selector>
+  <div class="dashboard-summary">
+    <h2>Income</h2>
+    <p>{{ incomeExpenseService.currentIncome() | currency }}</p>
+
+    <h2>Expenses</h2>
+    <p>{{ incomeExpenseService.currentExpenses() | currency }}</p>
+
+    <h2>Balance</h2>
+    <p>{{ incomeExpenseService.currentBalance() | currency }}</p>
+  </div>
 </div>

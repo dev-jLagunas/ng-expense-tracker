@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { DateSelectorService } from '../services/date-selector.service';
+import { IncomeExpenseService } from '../services/income-expense.service';
 
 @Component({
   selector: 'app-date-selector',
@@ -9,19 +11,23 @@ import { DatePipe } from '@angular/common';
   styleUrl: './date-selector.component.css',
 })
 export class DateSelectorComponent {
-  currentMonth = signal(new Date());
+  dateSelectorService = inject(DateSelectorService);
+  incomeExpenseService = inject(IncomeExpenseService);
+  currentMonth!: Date;
+
+  constructor() {
+    this.currentMonth = this.dateSelectorService.getCurrentMonth();
+  }
 
   previousMonth() {
-    const newDate = new Date(
-      this.currentMonth().setMonth(this.currentMonth().getMonth() - 1)
-    );
-    this.currentMonth.set(newDate);
+    this.dateSelectorService.previousMonth();
+    this.currentMonth = this.dateSelectorService.getCurrentMonth();
+    this.incomeExpenseService.updateFinancialSummary();
   }
 
   nextMonth() {
-    const newDate = new Date(
-      this.currentMonth().setMonth(this.currentMonth().getMonth() + 1)
-    );
-    this.currentMonth.set(newDate);
+    this.dateSelectorService.nextMonth();
+    this.currentMonth = this.dateSelectorService.getCurrentMonth();
+    this.incomeExpenseService.updateFinancialSummary();
   }
 }
