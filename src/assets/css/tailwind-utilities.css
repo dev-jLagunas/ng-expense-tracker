@@ -15,16 +15,26 @@ NAVBAR STYLES (BOTTOM)
 }
 
 /************************************************************
-NAVBAR HEADER (TOP)
+NAVBAR HEADER STYLES (TOP)
 *************************************************************/
 .navbar-header {
-  @apply bg-emerald-700  text-white py-2 flex justify-between items-center px-4;
+  @apply bg-emerald-700  text-white py-2 flex justify-between items-center px-4 md:py-4;
 }
 
 .header-hover-text {
-  @apply hidden group-hover:block absolute -bottom-12 left-1/2 transform -translate-x-14 bg-emerald-700 text-white rounded-md px-3 py-1;
+  @apply hidden group-hover:block absolute -bottom-14 left-1/2 transform -translate-x-14 bg-emerald-700 text-white rounded-md px-3 py-1;
 }
 
+/************************************************************
+SIDEBAR STYLES
+*************************************************************/
+.sidebar-wrapper {
+  @apply bg-emerald-700 text-white border-double min-h-screen flex flex-col items-center justify-center border-y-8;
+}
+
+.sidebar-list {
+  @apply text-lg flex flex-col gap-5;
+}
 /************************************************************
 REUSABLE STYLES
 *************************************************************/
@@ -37,5 +47,5 @@ REUSABLE STYLES
 }
 
 .logo-styles {
-  @apply font-fascinate text-xl xs:text-3xl;
+  @apply font-fascinate text-xl xs:text-3xl md:text-5xl;
 }

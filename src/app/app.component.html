@@ -1,4 +1,4 @@
-<!-- < 768px screens-->
+@if (isMobile) {
 <div>
   <app-header></app-header>
   <main>
@@ -6,13 +6,12 @@
   </main>
   <app-mobile-navbar class="md:hidden"></app-mobile-navbar>
 </div>
-<!-- >= 768px screens -->
-<div>
-  <app-desktop-sidebar
-    class="hidden md:block fixed left-0 top-0 h-full w-1/4 bg-gray-800 text-white"
-  ></app-desktop-sidebar>
+} @else {
+<app-header></app-header>
+<div class="hidden md:grid grid-cols-[13rem_1fr] min-h-screen">
+  <app-desktop-sidebar></app-desktop-sidebar>
   <main>
     <router-outlet></router-outlet>
   </main>
-  <!-- FOOTER COMPONENT HERE -->
 </div>
+}

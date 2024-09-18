@@ -8,9 +8,9 @@
   width: 0;
   z-index: 1;
   border-style: solid;
-  border-width: 10px 10px 0 0;
-  border-color: #047857 transparent transparent transparent;
-  bottom: -9px;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent #047857 transparent transparent;
+  top: -10px;
   left: 75%;
   margin-left: -21.5px;
 }
