@@ -3,6 +3,10 @@
   animation: jello-vertical 1s both;
 }
 
+.active {
+  border-left: 4px solid #f97316;
+}
+
 @-webkit-keyframes jello-vertical {
   0% {
     -webkit-transform: scale3d(1, 1, 1);

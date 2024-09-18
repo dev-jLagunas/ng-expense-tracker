@@ -1,22 +1,52 @@
 <ul class="bottom-navbar">
   <li class="relative group bottom-nav-item duration-600">
-    <span class="bottom-hover-text pointer">Budgets</span>
-    <i class="fa-solid fa-piggy-bank text-2xl jello-vertical"></i>
+    <a
+      [routerLink]="['/transactions']"
+      routerLinkActive="active"
+      class="flex flex-col items-center"
+    >
+      <span class="bottom-hover-text pointer">Transactions</span>
+      <i class="fa-solid fa-receipt text-2xl jello-vertical"></i>
+    </a>
   </li>
   <li class="relative group bottom-nav-item duration-600">
-    <span class="bottom-hover-text pointer">Challenges</span>
-    <i class="fa-solid fa-user-ninja text-2xl jello-vertical"></i>
+    <a
+      [routerLink]="['/calendar']"
+      routerLinkActive="active"
+      class="flex flex-col items-center"
+    >
+      <span class="bottom-hover-text pointer">Calendar</span>
+      <i class="fa-solid fa-calendar-days text-2xl jello-vertical"></i>
+    </a>
   </li>
   <li class="relative group bottom-nav-item duration-600">
-    <span class="bottom-hover-text pointer">Dashboard</span>
-    <i class="fa-solid fa-magnifying-glass-chart text-2xl jello-vertical"></i>
+    <a
+      [routerLink]="['/dashboard']"
+      routerLinkActive="active"
+      class="flex flex-col items-center"
+    >
+      <span class="bottom-hover-text pointer">Dashboard</span>
+      <i class="fa-solid fa-magnifying-glass-chart text-2xl jello-vertical"></i>
+    </a>
   </li>
   <li class="relative group bottom-nav-item duration-600">
-    <span class="bottom-hover-text pointer">Calendar</span>
-    <i class="fa-solid fa-calendar-days text-2xl jello-vertical"></i>
+    <a
+      [routerLink]="['/budgets']"
+      routerLinkActive="active"
+      class="flex flex-col items-center"
+    >
+      <span class="bottom-hover-text pointer">Budgets</span>
+      <i class="fa-solid fa-piggy-bank text-2xl jello-vertical"></i>
+    </a>
   </li>
   <li class="relative group bottom-nav-item duration-600">
-    <span class="bottom-hover-text pointer">Transactions</span>
-    <i class="fa-solid fa-receipt text-2xl jello-vertical"></i>
+    <a
+      [routerLink]="['/challenges']"
+      routerLinkActive="active"
+      class="flex flex-col items-center"
+    >
+      <span class="bottom-hover-text pointer">Challenges</span>
+      <i class="fa-solid fa-user-ninja text-2xl jello-vertical"></i>
+    </a>
   </li>
 </ul>

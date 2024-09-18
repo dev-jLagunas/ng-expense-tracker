@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-desktop-sidebar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './desktop-sidebar.component.html',
-  styleUrl: './desktop-sidebar.component.css'
+  styleUrl: './desktop-sidebar.component.css',
 })
-export class DesktopSidebarComponent {
-
-}
+export class DesktopSidebarComponent {}

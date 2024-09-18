@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-navbar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './mobile-navbar.component.html',
-  styleUrl: './mobile-navbar.component.css'
+  styleUrl: './mobile-navbar.component.css',
 })
-export class MobileNavbarComponent {
-
-}
+export class MobileNavbarComponent {}
