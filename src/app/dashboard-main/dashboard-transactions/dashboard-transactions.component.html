@@ -1,18 +1,18 @@
-<div class="px-4">
-  <h2 class="subtitle-styles my-4 md:w-max md:mx-auto">Recent Transactions</h2>
+<div class="">
+  <h2 class="">Recent Transactions</h2>
   @for ( transaction of transactions; track transaction.id) {
-  <article class="flex justify-between items-center text-slate-800">
-    <div class="flex">
+  <article class="">
+    <div class="">
       <i
         [ngClass]="transaction.icon"
         class="bg-emerald-700 text-white h-max p-2 rounded-full text-sm mr-2"
       ></i>
       <div>
-        <h3 class="tracking-widest">{{ transaction.title }}</h3>
-        <p class="text-xs text-slate-700">{{ transaction.notes }}</p>
+        <h3 class="">{{ transaction.title }}</h3>
+        <p class="">{{ transaction.notes }}</p>
       </div>
     </div>
-    <div class="text-center">
+    <div class="">
       <p
         [ngClass]="{
           'text-red-700': transaction.type === 'expense',
@@ -21,13 +21,11 @@
       >
         ${{ transaction.amount }}
       </p>
-      <p class="text-xs">{{ transaction.date }}</p>
+      <p class="">{{ transaction.date }}</p>
     </div>
   </article>
   }
-  <div class="text-end">
-    <button class="mt-4 bg-emerald-700 text-white px-3 rounded-md">
-      See All
-    </button>
+  <div class="">
+    <button class="">See All</button>
   </div>
 </div>

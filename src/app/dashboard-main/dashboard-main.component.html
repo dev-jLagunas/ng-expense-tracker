@@ -1,31 +1,21 @@
-<div class="">
-  <section class="md:grid md:grid-cols-[2fr_1fr] md:px-4 lg:mx-auto">
-    <div>
-      <app-date-selector></app-date-selector>
-      <app-dashboard-chart></app-dashboard-chart>
-    </div>
-    <article
-      class="flex justify-evenly md:flex-col text-xs gap-1 my-4 xs:text-base"
-    >
-      <div class="subtitle-styles">
-        <h3>Balance</h3>
-        <p>{{ incomeExpenseService.currentIncome() | currency }}</p>
-      </div>
-      <div class="subtitle-styles">
-        <h2>Expenses</h2>
-        <p>{{ incomeExpenseService.currentExpenses() | currency }}</p>
-      </div>
-      <div class="subtitle-styles">
-        <h2>Earnings</h2>
-        <p>{{ incomeExpenseService.currentBalance() | currency }}</p>
-      </div>
-    </article>
-  </section>
-  <section class="lg:grid-cols-3 lg:grid">
-    <app-dashboard-transactions></app-dashboard-transactions>
-    <app-dashboard-budgets></app-dashboard-budgets>
-    <app-dashboard-reminders></app-dashboard-reminders>
-  </section>
+<div class="w-90vw px-2">
+  <app-date-selector></app-date-selector>
+  <app-dashboard-chart></app-dashboard-chart>
+  <div class="subtitle-styles w-max">
+    <h3>Balance</h3>
+    <p>{{ incomeExpenseService.currentIncome() | currency }}</p>
+  </div>
+  <div class="subtitle-styles w-max">
+    <h2>Expenses</h2>
+    <p>{{ incomeExpenseService.currentExpenses() | currency }}</p>
+  </div>
+  <div class="subtitle-styles w-max">
+    <h2>Earnings</h2>
+    <p>{{ incomeExpenseService.currentBalance() | currency }}</p>
+  </div>
+  <app-dashboard-transactions></app-dashboard-transactions>
+  <app-dashboard-budgets></app-dashboard-budgets>
+  <app-dashboard-reminders></app-dashboard-reminders>
   <section>
     <app-dashboard-calendar></app-dashboard-calendar>
   </section>

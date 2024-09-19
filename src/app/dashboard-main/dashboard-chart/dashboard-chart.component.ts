@@ -41,7 +41,7 @@ export class DashboardChartComponent implements OnInit {
         {
           name: 'Expenses',
           type: 'pie',
-          radius: [30, 90],
+          radius: [30, 60],
           roseType: 'radius',
           data: categoryData,
         },

@@ -1,17 +1,25 @@
-<div>
-  <h4>Recent Budgets</h4>
-  <button>see all active budgets</button>
+<div class="">
+  <h4 class="">Recent Budgets</h4>
   @for ( budget of budgets; track budget.id) {
-  <h3>{{ budget.category }} - {{ budget.period }}</h3>
-  <p>Limit: ${{ budget.limit }} | Spent: ${{ budget.currentSpending }}</p>
+  <div class="">
+    <h3 class="">{{ budget.category }}</h3>
+    <p class="">{{ budget.period }}</p>
+  </div>
+  <div class="">
+    <p class="">Spent: ${{ budget.currentSpending }}</p>
+    <p class="">Limit: ${{ budget.limit }}</p>
+  </div>
 
-  <div class="budget-progress-container">
+  <div class="">
     <div
-      class="budget-progress-bar"
+      class=""
       [style.width.%]="
         calculatePercentage(budget.currentSpending, budget.limit)
       "
     ></div>
   </div>
   }
+  <div class="">
+    <button class="">See All</button>
+  </div>
 </div>
