@@ -3,7 +3,7 @@ NAVBAR STYLES (BOTTOM)
 *************************************************************/
 
 .bottom-navbar {
-  @apply fixed bottom-0 w-full flex justify-evenly py-2 bg-green-950 rounded-t-lg;
+  @apply fixed bottom-0 w-full mx-auto flex justify-evenly py-2 bg-green-950 rounded-t-lg;
 }
 
 .bottom-nav-item {
@@ -11,7 +11,7 @@ NAVBAR STYLES (BOTTOM)
 }
 
 .bottom-hover-text {
-  @apply hidden group-hover:block absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-green-950 text-white rounded-md px-3 py-1;
+  @apply hidden group-hover:block absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-green-950 text-white text-sm rounded-md px-3 py-1;
 }
 
 /************************************************************
@@ -33,7 +33,7 @@ NAVBAR HEADER STYLES (TOP)
 SIDEBAR STYLES
 *************************************************************/
 .sidebar-wrapper {
-  @apply bg-green-950 text-white h-screen flex flex-col items-center justify-center;
+  @apply bg-green-950 text-white h-screen flex flex-col items-center justify-start;
 }
 
 .sidebar-list {
@@ -43,12 +43,16 @@ SIDEBAR STYLES
 /************************************************************
 DATE SELECTOR STYLES
 *************************************************************/
-.date-selector-wrapper {
-  @apply flex justify-between text-slate-800 mt-4;
-}
 
 .month-btns {
-  @apply text-sm hover:scale-125 duration-700 text-slate-700 hover:text-slate-900;
+  @apply text-sm flex items-center font-light;
+}
+
+/************************************************************
+DASHBOARD MAIN STYLES
+*************************************************************/
+.numbers-display {
+  @apply border-4 border-double border-green-950 rounded-md px-1;
 }
 
 /************************************************************

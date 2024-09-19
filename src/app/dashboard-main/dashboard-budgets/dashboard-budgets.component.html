@@ -1,18 +1,18 @@
-<div class="">
-  <h4 class="">Recent Budgets</h4>
+<div class="w-90vw mx-auto md:w-full">
+  <h4 class="font-bold mt-4 mb-2 text-2xl text-green-950">Recent Budgets</h4>
   @for ( budget of budgets; track budget.id) {
-  <div class="">
+  <div class="flex justify-between">
     <h3 class="">{{ budget.category }}</h3>
     <p class="">{{ budget.period }}</p>
   </div>
-  <div class="">
+  <div class="flex justify-between">
     <p class="">Spent: ${{ budget.currentSpending }}</p>
     <p class="">Limit: ${{ budget.limit }}</p>
   </div>
 
-  <div class="">
+  <div class="budget-progress-container">
     <div
-      class=""
+      class="budget-progress-bar"
       [style.width.%]="
         calculatePercentage(budget.currentSpending, budget.limit)
       "

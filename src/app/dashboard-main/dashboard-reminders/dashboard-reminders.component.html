@@ -1,5 +1,5 @@
-<div class="">
-  <h2 class="">Reminders</h2>
+<div class="w-90vw mx-auto md:w-full">
+  <h2 class="font-bold mt-4 mb-2 text-2xl text-green-950">Reminders</h2>
   <div *ngFor="let reminder of reminders" class="reminder-item flex flex-col">
     <h3 class="">{{ reminder.title }}</h3>
     <p>Due: {{ reminder.dueDate | date }}</p>

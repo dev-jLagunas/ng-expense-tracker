@@ -1,8 +1,10 @@
-<div class="date-selector-wrapper z-10">
+<div
+  class="w-90vw mx-auto flex justify-center gap-4 my-4 text-green-950 items-center md:w-full"
+>
   <button (click)="previousMonth()" class="month-btns">
     <i class="fa-solid fa-caret-left pr-1"></i>Prev
   </button>
-  <p class="subtitle-styles text-sm md:text-base">
+  <p class="font-bold">
     {{ currentMonth | date : "MMMM y" }}
   </p>
   <button (click)="nextMonth()" class="month-btns">
