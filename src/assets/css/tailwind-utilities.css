@@ -3,7 +3,7 @@ NAVBAR STYLES (BOTTOM)
 *************************************************************/
 
 .bottom-navbar {
-  @apply fixed bottom-0 w-full flex justify-evenly py-2 bg-emerald-700 rounded-t-lg;
+  @apply fixed bottom-0 w-full flex justify-evenly py-2 bg-green-950 rounded-t-lg;
 }
 
 .bottom-nav-item {
@@ -11,29 +11,29 @@ NAVBAR STYLES (BOTTOM)
 }
 
 .bottom-hover-text {
-  @apply hidden group-hover:block absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-emerald-700 text-white rounded-md px-3 py-1;
+  @apply hidden group-hover:block absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-green-950 text-white rounded-md px-3 py-1;
 }
 
 /************************************************************
 NAVBAR HEADER STYLES (TOP)
 *************************************************************/
 .navbar-header {
-  @apply bg-emerald-700  text-white py-2 flex justify-between items-center px-4 md:py-4;
+  @apply bg-green-950  text-white py-2 flex justify-between items-center px-4 md:py-4 lg:justify-around;
 }
 
 .logo-styles {
-  @apply font-fascinate text-xl xs:text-3xl md:text-5xl;
+  @apply font-fascinate text-2xl;
 }
 
 .header-hover-text {
-  @apply hidden group-hover:block absolute -bottom-14 left-1/2 transform -translate-x-14 bg-emerald-700 text-white rounded-md px-3 py-1;
+  @apply hidden group-hover:block absolute -bottom-14 left-1/2 transform -translate-x-14 bg-green-950 text-white rounded-md px-3 py-1;
 }
 
 /************************************************************
 SIDEBAR STYLES
 *************************************************************/
 .sidebar-wrapper {
-  @apply bg-emerald-700 text-white border-double min-h-screen flex flex-col items-center justify-center border-y-8 md:h-full;
+  @apply bg-green-950 text-white h-screen flex flex-col items-center justify-center;
 }
 
 .sidebar-list {
@@ -46,6 +46,7 @@ DATE SELECTOR STYLES
 .date-selector-wrapper {
   @apply flex justify-between text-slate-800 mt-4;
 }
+
 .month-btns {
   @apply text-sm hover:scale-125 duration-700 text-slate-700 hover:text-slate-900;
 }
@@ -59,8 +60,4 @@ REUSABLE STYLES
 
 .flex-row-center {
   @apply flex justify-center items-center;
-}
-
-.subtitle-styles {
-  @apply font-bold tracking-widest bg-sky-700 text-white  rounded-md text-center;
 }

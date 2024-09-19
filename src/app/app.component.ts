@@ -1,8 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
 import { MobileNavbarComponent } from './navigation/mobile-navbar/mobile-navbar.component';
 import { DesktopSidebarComponent } from './navigation/desktop-sidebar/desktop-sidebar.component';
+import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import { DesktopSidebarComponent } from './navigation/desktop-sidebar/desktop-si
     RouterOutlet,
     MobileNavbarComponent,
     DesktopSidebarComponent,
-    HeaderComponent,
+    MobileHeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

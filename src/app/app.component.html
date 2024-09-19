@@ -1,13 +1,12 @@
 @if (isMobile) {
 <div>
-  <app-header></app-header>
+  <app-mobile-header></app-mobile-header>
   <main>
     <router-outlet></router-outlet>
   </main>
   <app-mobile-navbar class="md:hidden"></app-mobile-navbar>
 </div>
 } @else {
-<app-header></app-header>
 <div class="hidden md:grid grid-cols-[13rem_1fr] min-h-screen">
   <app-desktop-sidebar></app-desktop-sidebar>
   <main>
