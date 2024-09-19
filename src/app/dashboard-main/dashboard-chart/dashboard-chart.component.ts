@@ -29,11 +29,6 @@ export class DashboardChartComponent implements OnInit {
 
   setChartOptions(categoryData: any[]) {
     this.options = {
-      title: {
-        left: '50%',
-        text: 'Expenses by Category',
-        textAlign: 'center',
-      },
       tooltip: {
         trigger: 'item',
         formatter: '{a} <br/>{b} : ${c} ({d}%)',
@@ -47,7 +42,7 @@ export class DashboardChartComponent implements OnInit {
           name: 'Expenses',
           type: 'pie',
           radius: [30, 90],
-          roseType: 'area',
+          roseType: 'radius',
           data: categoryData,
         },
       ],

@@ -44,7 +44,7 @@ SIDEBAR STYLES
 DATE SELECTOR STYLES
 *************************************************************/
 .date-selector-wrapper {
-  @apply flex justify-between text-slate-800 px-4 mt-4 md:w-2/3 md:mx-auto;
+  @apply flex justify-between text-slate-800 px-4 mt-4 lg:w-1/2 lg:mx-auto;
 }
 .month-btns {
   @apply text-sm hover:scale-125 duration-700 text-slate-700 hover:text-slate-900;
@@ -62,5 +62,5 @@ REUSABLE STYLES
 }
 
 .subtitle-styles {
-  @apply font-bold tracking-widest bg-sky-700 text-white px-3 py-1 rounded-md;
+  @apply font-bold tracking-widest bg-sky-700 text-white px-3 py-1 rounded-md text-center;
 }
