@@ -1,0 +1,11 @@
+.calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  width: calc(100% / 7 - 10px); /* Display 7 days per row */
+}

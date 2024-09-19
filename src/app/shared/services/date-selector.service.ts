@@ -16,6 +16,19 @@ export class DateSelectorService {
     return new Date(date.getFullYear(), date.getMonth(), 1);
   }
 
+  getLastTwoWeeks(): Date[] {
+    const today = new Date();
+    const dates = [];
+
+    for (let i = 13; i >= 0; i--) {
+      const pastDate = new Date();
+      pastDate.setDate(today.getDate() - i);
+      dates.push(pastDate);
+    }
+
+    return dates;
+  }
+
   setCurrentDate(newDate: Date) {
     this.#currentDate.set(newDate);
   }

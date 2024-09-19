@@ -1,0 +1,9 @@
+<div *ngFor="let reminder of reminders" class="reminder-item">
+  <h3>{{ reminder.title }}</h3>
+  <p>Due: {{ reminder.dueDate | date }}</p>
+
+  <!-- Apply a class if the reminder is within the next 7 days -->
+  <div [ngClass]="{ 'urgent-reminder': isWithinDeadline(reminder.dueDate) }">
+    <span *ngIf="isWithinDeadline(reminder.dueDate)">Urgent!</span>
+  </div>
+</div>

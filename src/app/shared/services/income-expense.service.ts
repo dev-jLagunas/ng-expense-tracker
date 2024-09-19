@@ -50,6 +50,17 @@ export class IncomeExpenseService {
     });
   }
 
+  getTransactionsByDate(date: Date): any[] {
+    return this.#dummyData().users[0].transactions.filter((transaction) => {
+      const transactionDate = new Date(transaction.date);
+      return (
+        transactionDate.getFullYear() === date.getFullYear() &&
+        transactionDate.getMonth() === date.getMonth() &&
+        transactionDate.getDate() === date.getDate()
+      );
+    });
+  }
+
   updateFinancialSummary() {
     const transactions = this.getCurrentMonthTransactions();
 
@@ -64,5 +75,9 @@ export class IncomeExpenseService {
     this.currentIncome.set(totalIncome);
     this.currentExpenses.set(totalExpenses);
     this.currentBalance.set(totalIncome - totalExpenses);
+  }
+
+  getAllReminders(): any[] {
+    return this.#dummyData().users[0].reminders;
   }
 }

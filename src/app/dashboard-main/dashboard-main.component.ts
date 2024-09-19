@@ -5,6 +5,8 @@ import { CurrencyPipe } from '@angular/common';
 import { DashboardChartComponent } from './dashboard-chart/dashboard-chart.component';
 import { DashboardTransactionsComponent } from './dashboard-transactions/dashboard-transactions.component';
 import { DashboardBudgetsComponent } from './dashboard-budgets/dashboard-budgets.component';
+import { DashboardRemindersComponent } from './dashboard-reminders/dashboard-reminders.component';
+import { DashboardCalendarComponent } from './dashboard-calendar/dashboard-calendar.component';
 
 @Component({
   selector: 'app-dashboard-main',
@@ -15,6 +17,8 @@ import { DashboardBudgetsComponent } from './dashboard-budgets/dashboard-budgets
     DashboardChartComponent,
     DashboardTransactionsComponent,
     DashboardBudgetsComponent,
+    DashboardRemindersComponent,
+    DashboardCalendarComponent,
   ],
   templateUrl: './dashboard-main.component.html',
   styleUrl: './dashboard-main.component.css',

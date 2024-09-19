@@ -176,15 +176,19 @@ export const dummyData = {
         {
           id: 1,
           title: 'Pay Rent',
-          dueDate: '2024-09-01',
-          notificationDate: '2024-08-30',
+          dueDate: '2024-09-25',
           recurring: true,
         },
         {
           id: 2,
           title: 'Electricity Bill',
-          dueDate: '2024-09-10',
-          notificationDate: '2024-09-08',
+          dueDate: '2024-09-29',
+          recurring: true,
+        },
+        {
+          id: 3,
+          title: 'Pay Gym Membership',
+          dueDate: '2024-09-20',
           recurring: true,
         },
       ],

@@ -1,0 +1,19 @@
+<div class="calendar-container">
+  <div *ngFor="let date of lastTwoWeeks" class="calendar-day text-xs">
+    <h4>{{ getFormattedDate(date) }}</h4>
+    <div *ngIf="transactionsByDate[date.toISOString().split('T')[0]]?.length">
+      <p
+        *ngFor="
+          let transaction of transactionsByDate[
+            date.toISOString().split('T')[0]
+          ]
+        "
+      >
+        {{ transaction.title }} - {{ transaction.amount | currency }}
+      </p>
+    </div>
+    <div *ngIf="!transactionsByDate[date.toISOString().split('T')[0]]?.length">
+      <p>No transactions</p>
+    </div>
+  </div>
+</div>
