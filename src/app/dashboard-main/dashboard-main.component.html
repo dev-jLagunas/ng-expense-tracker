@@ -1,4 +1,4 @@
-<div class="md:w-2/3 md:mx-auto lg:w-full">
+<div class="md:w-2/3 md:mx-auto lg:w-full relative">
   <!-- Mobile Layout: Flex Column -->
   <div class="flex flex-col lg:hidden">
     <article
@@ -29,10 +29,10 @@
   <div class="hidden lg:grid lg:grid-cols-2 lg:p-4">
     <article class="text-center text-sm text-green-950 flex flex-col">
       <app-date-selector class=""></app-date-selector>
-      <div class="flex gap-2 justify-evenly">
+      <div class="flex gap-2 justify-evenly lg:justify-center">
         <section class="numbers-display">
           <h3 class="font-bold">Balance</h3>
-          <p>{{ incomeExpenseService.currentIncome() | currency }}</p>
+          <p class="">{{ incomeExpenseService.currentIncome() | currency }}</p>
         </section>
         <section class="numbers-display">
           <h2 class="font-bold">Earnings</h2>
@@ -49,8 +49,10 @@
     <app-dashboard-transactions class=""></app-dashboard-transactions>
     <div class="col-span-2 grid grid-cols-2 gap-8">
       <app-dashboard-budgets class="col-span-1"></app-dashboard-budgets>
-      <app-dashboard-reminders class="col-span-1"></app-dashboard-reminders>
+      <div class="col-span-1 -mt-20">
+        <app-dashboard-reminders></app-dashboard-reminders>
+        <app-dashboard-calendar></app-dashboard-calendar>
+      </div>
     </div>
-    <app-dashboard-calendar class="col-span-2"></app-dashboard-calendar>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="w-90vw mx-auto md:w-full text-green-950 mb-16 lg:mb-0">
+<div class="w-90vw mx-auto md:w-full text-green-950 lg:mb-0">
   <div class="flex justify-between items-center">
     <h2 class="font-bold my-4 text-2xl lg:my-0 lg:mb-4">Reminders</h2>
     <button class="bg-green-900 text-white px-3 rounded-md font-semibold">
@@ -6,7 +6,7 @@
     </button>
   </div>
   @for (reminder of reminders; track reminder.id) {
-  <div class="flex justify-between items-center relative mb-4">
+  <div class="flex justify-between items-center relative my-4">
     <h3 class="font-semibold underline">{{ reminder.title }}</h3>
     <p class="text-sm">Due: {{ reminder.dueDate | date }}</p>
     @if (isWithinDeadline(reminder.dueDate)) {

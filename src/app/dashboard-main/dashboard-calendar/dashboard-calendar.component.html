@@ -1,28 +1,36 @@
-<div class="tabs-container mb-16 lg:mb-0">
-  <!-- Tabs Header -->
-  <div class="tabs-header">
+<div class="w-90vw mx-auto mb-16 lg:mb-0 text-green-950 lg:w-full lg:mt-4">
+  <div class="flex justify-between items-center">
+    <h2 class="font-bold my-4 text-2xl lg:my-0 lg:mb-4">Calendar</h2>
+    <button class="bg-green-900 text-white px-3 rounded-md font-semibold">
+      See All
+    </button>
+  </div>
+  <div class="flex gap-1 justify-center">
     @for (day of currentWeekDays; track $index) {
     <button
       (click)="setActiveTab($index)"
       [class.active]="activeTabIndex === currentWeekDays.indexOf(day)"
-      class="tab-button"
+      class="tab-button flex flex-col border border-green-950 p-1 rounded-sm text-xs"
     >
       {{ day | date : "EEE, MMM d" }}
     </button>
     }
   </div>
 
-  <!-- Tab Content -->
-  <div class="tabs-content">
-    @if (hasTransactionsForActiveTab()) {
-    <div class="transaction-list">
-      @for (transaction of getTransactionsForActiveTab(); track transaction.id)
-      {
-      <p>{{ transaction.title }} - {{ transaction.amount | currency }}</p>
-      }
-    </div>
-    } @else {
-    <p>No transactions</p>
-    }
+  @if (hasTransactionsForActiveTab()) {
+  <p class="text-center font-semibold underline mt-4 lg:text-xl">
+    This days transactions
+  </p>
+  @for (transaction of getTransactionsForActiveTab(); track transaction.id) {
+  <div class="flex justify-between">
+    <p class="font-semibold">
+      <i class="fa-solid fa-caret-right pr-1"></i>{{ transaction.title }}
+    </p>
+    <p class="text-xs">{{ transaction.amount | currency }}</p>
   </div>
+  } } @else {
+  <p class="text-center font-semibold underline mt-4 lg:text-xl">
+    No transactions on this day
+  </p>
+  }
 </div>

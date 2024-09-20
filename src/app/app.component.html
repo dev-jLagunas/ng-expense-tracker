@@ -1,12 +1,19 @@
-<div>
+<div class="">
   @if (isMobile) {
   <div>
+    <button
+      class="fixed left-2 top-44 opacity-25 hover:opacity-100 duration-700 z-50 lg:absolute"
+    >
+      <i
+        class="fa-solid fa-plus bg-orange-700 text-white text-3xl rounded-full px-3 py-2 font-bold"
+      ></i>
+    </button>
     <app-mobile-header></app-mobile-header>
     <router-outlet></router-outlet>
     <app-mobile-navbar class="lg:hidden"></app-mobile-navbar>
   </div>
   } @else {
-  <div class="hidden md:grid md:grid-cols-[13rem_1fr] md:h-screen">
+  <div class="hidden md:grid md:grid-cols-[13rem_1fr] md:h-screen relative">
     <app-desktop-sidebar></app-desktop-sidebar>
     <main>
       <router-outlet></router-outlet>
