@@ -33,7 +33,7 @@ NAVBAR HEADER STYLES (TOP)
 SIDEBAR STYLES
 *************************************************************/
 .sidebar-wrapper {
-  @apply bg-green-950 text-white h-screen flex flex-col items-center justify-start;
+  @apply bg-green-950 text-white h-screen flex flex-col items-center justify-center;
 }
 
 .sidebar-list {
@@ -52,7 +52,7 @@ DATE SELECTOR STYLES
 DASHBOARD MAIN STYLES
 *************************************************************/
 .numbers-display {
-  @apply border-4 border-double border-green-950 rounded-md px-1;
+  @apply border-4 border-double border-green-950 rounded-md px-1 sm:text-lg lg:px-2;
 }
 
 /************************************************************

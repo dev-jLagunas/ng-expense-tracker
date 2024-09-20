@@ -145,6 +145,16 @@ export const dummyData = {
           icon: 'fa-solid fa-money-bill',
           notes: 'freenlance project for accounting firm',
         },
+        {
+          id: 15,
+          title: 'Car Payment',
+          amount: 200,
+          date: '2024-09-18',
+          category: 'Freelance',
+          type: 'expense',
+          icon: 'fa-solid fa-car-side',
+          notes: 'car payment',
+        },
       ],
       budgets: [
         {
@@ -159,6 +169,14 @@ export const dummyData = {
           category: 'Utilities',
           period: 'monthly',
           limit: 200,
+          currentSpending: 100,
+          startDate: '2024-09-01',
+          endDate: '2024-09-30',
+        },
+        {
+          category: 'Activities',
+          period: 'monthly',
+          limit: 300,
           currentSpending: 100,
           startDate: '2024-09-01',
           endDate: '2024-09-30',

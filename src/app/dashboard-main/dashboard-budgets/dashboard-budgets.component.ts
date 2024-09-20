@@ -15,7 +15,7 @@ export class DashboardBudgetsComponent implements OnInit {
   ngOnInit(): void {
     this.budgets = this.incomeExpenseService
       .getCurrentMonthBudgets()
-      .slice(0, 3);
+      .slice(0, 4);
   }
 
   calculatePercentage(currentSpending: number, limit: number): number {

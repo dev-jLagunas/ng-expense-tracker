@@ -1,40 +1,70 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { DateSelectorService } from '../../shared/services/date-selector.service';
 import { IncomeExpenseService } from '../../shared/services/income-expense.service';
-import { CurrencyPipe, DatePipe, NgFor, NgIf } from '@angular/common';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard-calendar',
   standalone: true,
-  imports: [NgFor, NgIf, CurrencyPipe, DatePipe],
+  imports: [CurrencyPipe, DatePipe],
   templateUrl: './dashboard-calendar.component.html',
-  styleUrl: './dashboard-calendar.component.css',
+  styleUrls: ['./dashboard-calendar.component.css'],
 })
 export class DashboardCalendarComponent implements OnInit {
-  lastTwoWeeks: Date[] = [];
+  currentWeekDays: Date[] = [];
   transactionsByDate: { [key: string]: any[] } = {};
+  activeTabIndex: number = 0;
+
   dateSelectorService = inject(DateSelectorService);
   incomeExpenseService = inject(IncomeExpenseService);
-  currentMonth!: Date;
-
-  constructor() {
-    this.currentMonth = this.dateSelectorService.getCurrentMonth();
-  }
 
   ngOnInit(): void {
-    this.lastTwoWeeks = this.dateSelectorService.getLastTwoWeeks();
+    this.currentWeekDays = this.getCurrentWeekDays();
     this.populateTransactions();
   }
 
+  // Method to calculate current week (Monday to Friday)
+  getCurrentWeekDays(): Date[] {
+    const currentDate = this.dateSelectorService.getCurrentDate();
+    const startOfWeek = currentDate.getDate() - currentDate.getDay() + 1; // Get Monday
+    const weekDays = [];
+    for (let i = 0; i < 5; i++) {
+      const day = new Date(currentDate);
+      day.setDate(startOfWeek + i); // Monday to Friday
+      weekDays.push(day);
+    }
+    return weekDays;
+  }
+
+  // Method to populate transactions by date
   populateTransactions(): void {
-    this.lastTwoWeeks.forEach((date) => {
-      const formattedDate = date.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
+    this.currentWeekDays.forEach((date) => {
+      const formattedDate = this.formatDate(date);
       this.transactionsByDate[formattedDate] =
         this.incomeExpenseService.getTransactionsByDate(date);
     });
   }
 
-  getFormattedDate(date: Date): string {
-    return date.toDateString();
+  // Method to set the active tab index
+  setActiveTab(index: number): void {
+    this.activeTabIndex = index;
+  }
+
+  // Simplify date formatting for template usage
+  formatDate(date: Date): string {
+    return date.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+  }
+
+  // Get transactions for the currently selected tab
+  getTransactionsForActiveTab(): any[] {
+    const activeDate = this.formatDate(
+      this.currentWeekDays[this.activeTabIndex]
+    );
+    return this.transactionsByDate[activeDate] || [];
+  }
+
+  // Check if there are transactions for the active tab
+  hasTransactionsForActiveTab(): boolean {
+    return this.getTransactionsForActiveTab().length > 0;
   }
 }

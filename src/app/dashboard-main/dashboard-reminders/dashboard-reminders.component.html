@@ -1,11 +1,17 @@
-<div class="w-90vw mx-auto md:w-full">
-  <h2 class="font-bold mt-4 mb-2 text-2xl text-green-950">Reminders</h2>
-  <div *ngFor="let reminder of reminders" class="reminder-item flex flex-col">
-    <h3 class="">{{ reminder.title }}</h3>
-    <p>Due: {{ reminder.dueDate | date }}</p>
-
-    <div [ngClass]="{ 'urgent-reminder': isWithinDeadline(reminder.dueDate) }">
-      <span *ngIf="isWithinDeadline(reminder.dueDate)">Urgent!</span>
-    </div>
+<div class="w-90vw mx-auto md:w-full text-green-950 mb-16 lg:mb-0">
+  <div class="flex justify-between items-center">
+    <h2 class="font-bold my-4 text-2xl lg:my-0 lg:mb-4">Reminders</h2>
+    <button class="bg-green-900 text-white px-3 rounded-md font-semibold">
+      See All
+    </button>
   </div>
+  @for (reminder of reminders; track reminder.id) {
+  <div class="flex justify-between items-center relative mb-4">
+    <h3 class="font-semibold underline">{{ reminder.title }}</h3>
+    <p class="text-sm">Due: {{ reminder.dueDate | date }}</p>
+    @if (isWithinDeadline(reminder.dueDate)) {
+    <span class="absolute -top-4 right-0 text-xs text-red-700">upcoming</span>
+    }
+  </div>
+  }
 </div>

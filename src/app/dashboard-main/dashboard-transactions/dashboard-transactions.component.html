@@ -1,5 +1,11 @@
-<div class="text-green-950 w-90vw mx-auto md:w-full">
-  <h2 class="font-bold mt-4 mb-2 text-2xl">Recent Transactions</h2>
+<div class="text-green-950 w-90vw mx-auto mt-4 md:w-full lg:mt-0">
+  <div class="flex justify-between items-center">
+    <h2 class="font-bold mt-4 mb-2 text-2xl lg:mt-0">Recent Transactions</h2>
+    <button class="bg-green-900 text-white px-3 rounded-md font-semibold">
+      See All
+    </button>
+  </div>
+
   @for ( transaction of transactions; track transaction.id) {
   <article
     class="flex justify-between items-center mb-4 pb-2 border-b border-green-950 border-opacity-10"
@@ -27,7 +33,4 @@
     </div>
   </article>
   }
-  <div class="">
-    <button class="">See All</button>
-  </div>
 </div>

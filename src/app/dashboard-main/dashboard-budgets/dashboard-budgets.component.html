@@ -1,11 +1,17 @@
-<div class="w-90vw mx-auto md:w-full">
-  <h4 class="font-bold mt-4 mb-2 text-2xl text-green-950">Recent Budgets</h4>
-  @for ( budget of budgets; track budget.id) {
-  <div class="flex justify-between">
-    <h3 class="">{{ budget.category }}</h3>
-    <p class="">{{ budget.period }}</p>
+<div class="w-90vw mx-auto md:w-full text-green-950 mt-4">
+  <div class="flex justify-between items-center">
+    <h4 class="font-bold mt-4 mb-2 text-2xl">Recent Budgets</h4>
+    <button class="bg-green-900 text-white px-3 rounded-md font-semibold">
+      See All
+    </button>
   </div>
-  <div class="flex justify-between">
+
+  @for ( budget of budgets; track budget.id) {
+  <div class="flex justify-between items-center">
+    <h3 class="font-semibold underline">{{ budget.category }} Budget</h3>
+    <p class="text-xs">{{ budget.period }}</p>
+  </div>
+  <div class="flex justify-between items-center text-sm">
     <p class="">Spent: ${{ budget.currentSpending }}</p>
     <p class="">Limit: ${{ budget.limit }}</p>
   </div>
@@ -19,7 +25,4 @@
     ></div>
   </div>
   }
-  <div class="">
-    <button class="">See All</button>
-  </div>
 </div>
